@@ -1,0 +1,27 @@
+#button {
+    margin-bottom: 10px;
+    background-color: lightgreen;
+    font-weight: bold;
+    border-color: green;
+    border-radius: 5px;
+}
+
+.default-container {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border: solid green 3px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    gap: 1px;
+    padding:5px;
+}
+
+.default-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    border-radius: 0px;
+}
