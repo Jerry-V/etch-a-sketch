@@ -94,14 +94,16 @@ function randColor(e) {
 }
 
 function buttonRefresh(){
-    let minGridSize = 0;
+    let minGridSize = 1;
     let maxGridSize = 100;
     
     let message = prompt('Enter a number from 1 to 100:');
     
     console.log('Inputted Value: '+message);
     // filter out non-positive-integer values too big or too small (filters text too :D)
-    if (!isNaN(message) && message > minGridSize && message <= maxGridSize){
+    if (!isNaN(message) && message >= minGridSize && message <= maxGridSize){
+        // rounding down "message" is required or the grid will not populate correctly
+        message = Math.floor(message);
         refreshGrid(message,container);
         container.dataset.currentSize = message;
     }
